@@ -11,8 +11,7 @@ def solution(N, stages):
 
     if number_sum.get(N+1):
         del(number_sum[N+1])
-    number_sum = sorted(number_sum.items(), key = lambda item : item[1], reverse=True)
-    for key , value in number_sum:
+    for key , value in sorted(number_sum.items(), key = lambda item : item[1], reverse=True):
         answer.append(key)
     for num in range(1,N+1):
         if not answer.count(num):
