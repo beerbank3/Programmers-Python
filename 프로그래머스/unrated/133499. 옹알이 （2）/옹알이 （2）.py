@@ -3,7 +3,7 @@ def solution(babbling):
     word_list = ['aya','ye','woo','ma']
     for word in word_list:
         for i, babble in enumerate(babbling):
-            if babble.count(word+word) > 0:
+            if (word+word) in babble:
                 continue
             babbling[i] = babble.replace(word,' ')
     for i in babbling:
