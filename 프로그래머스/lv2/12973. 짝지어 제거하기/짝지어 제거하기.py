@@ -2,8 +2,6 @@ import re
 def solution(s):
     answer = 1
     stack = []
-    pattern = re.compile(r'(\w)\1')
-    s = pattern.sub('',s)
     for i in range(len(s)):
         if not stack:
             stack.append(s[i])
